@@ -35,12 +35,13 @@
         /* or 164% */
         margin: 10px 0;
     }
+
 }
 
 
 
 /* Untuk Smartphone */
-@media all and (max-width: 670px) {
+@media all and (max-width: 700px) {
     .header-right {
         display: none;
     }
@@ -63,5 +64,18 @@
     .text-tentang {
         font-size: 16px;
         line-height: 30px;
+    }
+
+    .prestasi-slider {
+        padding: 0;
+    }
+
+    .prestasi img {
+        margin: 0 auto;
+    }
+
+    .container-siswa-slider .batas {
+        /* visibility: hidden; */
+        display: none;
     }
 }

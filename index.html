@@ -17,6 +17,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500&display=swap" rel="stylesheet">
 
+    <!-- Slick Slider -->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
     <!-- Judul Lah -->
     <title>SIJA</title>
 </head>
@@ -70,24 +77,135 @@
 
         <div class="jumlah-siswa">
             <h2>Jumlah Siswa</h2>
-            <div class="container">
-                <p class="siswa">70 <br class="murid">X</p>
-                <p class="batas">|</p>
-                <p class="siswa">69 <br class="murid">XI</p>
-                <p class="batas">|</p>
-                <p class="siswa">72 <br class="murid">XII</p>
-                <p class="batas">|</p>
-                <p class="siswa">70 <br class="murid">XII</p>
+            <div class="container container-siswa-slider">
+                <div class="siswa-slider">
+                    <p class="siswa">70 <br>X</p>
+                    <!-- <p class="batas">|</p> -->
+                </div>
+                <div class="siswa-slider">
+                    <p class="siswa">69 <br>XI</p>
+                    <!-- <p class="batas">|</p> -->
+                </div>
+                <div class="siswa-slider">
+                    <p class="siswa">72 <br>XII</p>
+                    <!-- <p class="batas">|</p> -->
+                </div>
+                <div class="siswa-slider">
+                    <p class="siswa">70 <br>XIII</p>
+                </div>
             </div>
         </div>
     </main>
 
+
+    <!-- Prestasi -->
+
+    
+    <div class="prestasi-container">
+        <h2>Prestasi</h2>
+        <div class="prestasi-slider">
+            <div class="prestasi">
+                <img src="/assets/prestasi/prestasi-template.png" 
+                alt="prestasi ngajar">
+            </div>
+            <div class="prestasi">
+                <img src="/assets/prestasi/prestasi-template.png" 
+                alt="prestasi ngajar">
+            </div>
+            <div class="prestasi">
+                <img src="/assets/prestasi/prestasi-template.png" 
+                alt="prestasi ngajar">
+            </div>
+            <div class="prestasi">
+                <img src="/assets/prestasi/prestasi-template.png" 
+                alt="prestasi ngajar">
+            </div>
+            <div class="prestasi">
+                <img src="/assets/prestasi/prestasi-template.png" 
+                alt="prestasi ngajar">
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <p>
         <strong>Website SIJA</strong> by <a href="#">Kelompok 7</a>. 
         </p>
       </footer>
+
+
+      <!-- Mengimport module slick -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+      <script type="text/javascript">
+
+    // Slider untuk Siswa
+    function slickfy(){
+            $('.container-siswa-slider').slick({
+                dots:true,
+                autoplay:true,
+                autoplaySpeed: 2000,
+                slidesToShow: 1,
+                slidesToScroll: true,
+                slide: '.siswa-slider'
+            });
+          }
+
+    $(window).resize(function(){
+        var $windowWidth = $(document).width();
+        if ($windowWidth < 700) {
+            slickfy();   
+        }else{
+            $('.container-siswa-slider').slick("unslick");
+        }
+    });
+
+
+    //   Slider untuk prestasi
+    $(document).ready(function(){
+      $('.prestasi-slider').slick({
+        // slidesToShow:3,
+        dots : true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+            responsive: [{
+            breakpoint: 1024,
+            settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+                }
+            },
+            {
+            breakpoint: 1000,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+            },
+            {
+            breakpoint: 700,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+      });
+    });
+
+
+        
+
+      </script>
 </body>
 
 </html>

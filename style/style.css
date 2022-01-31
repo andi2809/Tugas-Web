@@ -140,7 +140,7 @@ header {
     margin: 0 auto;
     height: 700px;
     /* bg-img */
-    background: url(../assets/background-header.svg);
+    background: url(../assets/background-header.png);
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
@@ -342,35 +342,57 @@ h2 {
     height: 268px;
     background-color: #FAFAFA;
     margin-bottom: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: space-around;
 
-    background: url(../assets/background-siswa.svg);
+    background: url(../assets/background-siswa.png);
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.jumlah-siswa .container p {
+.jumlah-siswa .container .siswa-slider {
     width: 120px;
 }
 
-.container .siswa {
+
+
+.container .siswa-slider .siswa {
     font-size: 55px;
     text-align: center;
     color: #C0CAC9;
+
 }
+
 
 .batas {
     font-size: 90px;
-    font-weight: bold;
     color: #C0CAC9;
+    font-weight: bold;
+    text-align: center;
 }
 
+
+/* Prestasi */
+.prestasi-container {
+    height: 444px;
+}
+
+.prestasi {
+    display: inline-block;
+}
+
+.prestasi-slider {
+    padding-left: 20px;
+}
+
+.prestasi img {
+    width: 408px;
+    height: 304px;
+    overflow: hidden;
+}
 
 
 /* Footer */
