@@ -133,6 +133,10 @@ table {
 
 /* Header */
 /* Nav Bar */
+body {
+
+    overflow-x: hidden !important;
+}
 
 header {
     top: 0;
@@ -173,7 +177,7 @@ header {
     display: block;
     float: left;
     transition: all 0.5s;
-    color: #525252;
+    color: #313030;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -234,9 +238,9 @@ header {
 }
 
 .btn:hover {
-    opacity: 0.7;
+    opacity: 0.8;
     color: white;
-    background-color: #525252;
+    background-color: black;
 
 }
 
@@ -250,6 +254,7 @@ header {
 }
 
 h2 {
+    display: block;
     text-align: center;
     font-size: 50px;
     font-weight: 400;
@@ -336,6 +341,94 @@ h2 {
 }
 
 
+/* GURU */
+
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #A5C8E4;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 1s;
+    z-index: -1;
+}
+
+.dot1 {
+    top: 0;
+    left: 30px;
+}
+
+.dot2 {
+    top: 0;
+    left: 70px;
+}
+
+.container-guru:hover>.dot {
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    transition: all 1s;
+}
+
+.container-guru:hover+.text {
+    border-radius: 0 0 30px 30px;
+    transition: all 1s;
+}
+
+.container-guru {
+    position: relative;
+    width: 300px;
+    height: auto;
+}
+
+/* .container-guru img{
+    margin-bottom: -2p;
+  } */
+.text {
+    width: 300px;
+    height: auto;
+    background-color: #505254;
+    opacity: 0.8;
+    margin-top: -3px;
+    text-align: center;
+    transition: all 1s;
+    padding: 10px 0 0;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+h5 {
+    font-size: 19px;
+    color: rgba(80, 80, 80, 0.993);
+}
+
+.guru {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    /* margin: 0 auto; */
+}
+
+.guru-container {
+    flex-basis: 30%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-guru img {
+    width: 300px !important;
+    height: 293px;
+}
+
+
 /* Jumlah Siswa */
 
 .jumlah-siswa .container {
@@ -365,15 +458,6 @@ h2 {
     color: #C0CAC9;
 
 }
-
-
-.batas {
-    font-size: 90px;
-    color: #C0CAC9;
-    font-weight: bold;
-    text-align: center;
-}
-
 
 /* Prestasi */
 .prestasi-container {

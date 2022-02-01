@@ -75,6 +75,95 @@
                 </div>
         </div>
 
+
+        <!-- GURU-->
+        
+        <h2>Guru</h2>
+        <div class="guru">
+            <div class="guru-container">
+                <div class="guru-slider">
+                    <div>
+                        <div class="container-guru">
+                            <img src="/assets/guru/kuri.png" alt="" srcset="">
+                            <div class="dot1 dot"></div>
+                            <div class="dot2 dot"></div>
+                        </div>
+                        <div class="text">
+                            <h4>Kuri Asih</h4>
+                            <h5>Kepala Bengkel</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="guru-container">
+                <div class="guru-slider">
+                    <div>
+                        <div class="container-guru">
+                            <img src="/assets/guru/Samsul.png" alt="" srcset="">
+                            <div class="dot1 dot"></div>
+                            <div class="dot2 dot"></div>
+                        </div>
+                        <div class="text">
+                            <h4>SAMSUL BAHRI, S.PD</h4>
+                            <h5>Guru</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="guru-container">
+                <div class="guru-slider">
+                        <div>
+                        <div class="container-guru">
+                            <img src="/assets/guru/Danial.png" alt="" srcset="">
+                            <div class="dot1 dot"></div>
+                            <div class="dot2 dot"></div>
+                        </div>
+                        <div class="text">
+                            <h4>DANIAL AHADIAN, S.PD</h4>
+                            <h5>Guru</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="guru-container">
+                <div class="guru-slider">
+                        <div>
+                        <div class="container-guru">
+                            <img src="/assets/guru/Sevia.png" alt="" srcset="">
+                            <div class="dot1 dot"></div>
+                            <div class="dot2 dot"></div>
+                        </div>
+                        <div class="text">
+                            <h4>SEVIA HELENA KIRANTI, S.KOM</h4>
+                            <h5>Guru</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="guru-container">
+                <div class="guru-slider">
+                        <div>
+                        <div class="container-guru">
+                            <img src="/assets/guru/Eva.png" alt="" srcset="">
+                            <div class="dot1 dot"></div>
+                            <div class="dot2 dot"></div>
+                        </div>
+                        <div class="text">
+                            <h4>EVA YULIZIAR, S.PD</h4>
+                            <h5>Guru</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- SISWA -->
         <div class="jumlah-siswa">
             <h2>Jumlah Siswa</h2>
             <div class="container container-siswa-slider">
@@ -139,9 +228,33 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-      <script type="text/javascript">
+    <script type="text/javascript">
+
+
+
+        // Slider Untuk Guru
+        function guruSlide(){
+            $('.guru').slick({
+                dots:true,
+                autoplay:true,
+                autoplaySpeed: 2000,
+                slidesToShow: 1,
+                slidesToScroll: true,
+                slide: '.guru-container'
+            });
+          }
+
+          $(window).resize(function(){
+            var $windowWidth = $(document).width();
+            if ($windowWidth < 700) {
+                guruSlide();   
+            }else{
+                $('.guru').slick("unslick");
+            }
+        });
 
     // Slider untuk Siswa
+
     function slickfy(){
             $('.container-siswa-slider').slick({
                 dots:true,
@@ -152,7 +265,7 @@
                 slide: '.siswa-slider'
             });
           }
-
+    
     $(window).resize(function(){
         var $windowWidth = $(document).width();
         if ($windowWidth < 700) {
