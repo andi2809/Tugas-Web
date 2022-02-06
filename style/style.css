@@ -105,7 +105,9 @@ section {
 }
 
 body {
-    line-height: 1;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 ol,
@@ -139,41 +141,38 @@ body {
 }
 
 header {
-    top: 0;
-    z-index: 10;
-    margin: 0 auto;
+    z-index: 2;
     height: 700px;
     /* bg-img */
-    background: url(../assets/background-header.png);
+    background: url(../assets/background-header.jpg);
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
-.container {
+header .container {
     /* height: 120px; */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: row;
+    margin: auto;
+    width: 90%;
 }
 
-
 .logo {
-    width: 290px;
-    display: block;
-    margin-top: 10px;
+    width: 205px;
 }
 
 .header-right {
     float: right;
-    margin-left: 50px;
-    /* margin-left: 60px; */
+    display: flex;
+    align-items: center;
 }
 
 .header-right a {
-    line-height: 120px;
-    padding: 0 15px;
+    padding: 0 10px;
     display: block;
     float: left;
     transition: all 0.5s;
@@ -182,6 +181,7 @@ header {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 1.25rem;
+
 }
 
 .header-right a:hover {
@@ -209,7 +209,7 @@ header {
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 64px;
+    font-size: 4rem;
     text-transform: uppercase;
 }
 
@@ -234,7 +234,7 @@ header {
     transition: all 0.7s;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .btn:hover {
@@ -246,25 +246,34 @@ header {
 
 /* Tentang */
 
-.tentang {
-    background: url(../assets/background-Tentang.svg);
-    background-repeat: no-repeat;
-    /* background-size: cover; */
-    padding: 30px 90px;
+main {
+    margin-top: 90px;
 }
 
 h2 {
     display: block;
     text-align: center;
-    font-size: 50px;
+    font-size: 3.125rem;
     font-weight: 400;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 20px 0 40px;
 }
 
+.tentang {
+    background: url(../assets/background-Tentang.svg);
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    width: 85%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 .tentang .container {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 .foto {
@@ -279,8 +288,8 @@ h2 {
 }
 
 .foto-tentang {
-    width: 606px;
-    height: 373px;
+    width: 100%;
+    height: auto;
     border-radius: 45px;
     box-sizing: border-box;
 }
@@ -289,12 +298,13 @@ h2 {
     font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 41px;
     letter-spacing: 0.02em;
     text-align: justify;
     transition: all 0.5s;
     box-sizing: border-box;
+    width: 95%;
 }
 
 .foto-1 .text-tentang {
@@ -307,6 +317,174 @@ h2 {
 }
 
 
+/* GURU */
+
+.guru {
+    background: url(../assets/guru/bg-guru.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #C4C4C4;
+    opacity: 0.3;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 0.8s;
+    z-index: -1;
+}
+
+.dot1 {
+    top: 190px;
+    left: 240px;
+}
+
+.dot2 {
+    top: 30px;
+    left: 70px;
+}
+
+.container-guru:hover>.dot {
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    transition: all 0.8s;
+}
+
+.container-guru:hover+.text {
+    border-radius: 0 0 30px 30px;
+    transition: all 0.8s;
+}
+
+.container-guru {
+    position: relative;
+    width: 300px;
+    height: auto;
+}
+
+/* .container-guru img{
+    margin-bottom: -2p;
+  } */
+.text {
+    width: 300px;
+    height: auto;
+    background-color: #F4EBEB;
+    opacity: 0.8;
+    margin-top: -3px;
+    text-align: center;
+    transition: all 1s;
+    padding: 10px 0 5px;
+}
+
+h4 {
+    font-size: 1.875rem;
+}
+
+h5 {
+    font-size: 1.188rem;
+    color: rgba(80, 80, 80, 0.993);
+}
+
+.guru {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    /* margin: 0 auto; */
+}
+
+.guru-container {
+    flex-basis: 30%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-guru img {
+    width: 300px !important;
+    height: 293px;
+}
+
+
+/* Jumlah Siswa */
+.jumlah-siswa {
+    margin: 70px 0 90px;
+}
+
+.jumlah-siswa .container {
+    height: 268px;
+    background-color: #FAFAFA;
+    margin-bottom: 60px;
+
+    background: url(../assets/background-siswa.png);
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.jumlah-siswa .container .siswa-slider {
+    width: 120px;
+}
+
+
+
+.container .siswa-slider .siswa {
+    font-size: 3.438rem;
+    text-align: center;
+    color: #C0CAC9;
+
+}
+
+/* Prestasi */
+.prestasi-container {
+    height: 444px;
+    padding-bottom: 60px;
+}
+
+.prestasi {
+    display: inline-block;
+    width: 100%;
+}
+
+.prestasi-slider {
+    padding-left: 20px;
+}
+
+.prestasi img {
+    width: 95%;
+    height: auto;
+    overflow: hidden;
+}
+
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    height: 100px;
+    background-color: #FAFAFA;
+    text-align: center;
+    line-height: 100px;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+}
+
+footer p {
+    opacity: 0.6;
+}
+
+footer a {
+    text-decoration: none;
+}
 
 /* Scroolbar */
 ::-webkit-scrollbar {
@@ -338,161 +516,4 @@ h2 {
 ::selection {
     background-color: #0051b3 !important;
     color: #f4f2ee !important;
-}
-
-
-/* GURU */
-
-
-.dot {
-    height: 25px;
-    width: 25px;
-    background-color: #A5C8E4;
-    border-radius: 50%;
-    position: absolute;
-    transition: all 1s;
-    z-index: -1;
-}
-
-.dot1 {
-    top: 0;
-    left: 30px;
-}
-
-.dot2 {
-    top: 0;
-    left: 70px;
-}
-
-.container-guru:hover>.dot {
-    top: 0;
-    left: 0;
-    border-radius: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: 30px 30px 0 0;
-    transition: all 1s;
-}
-
-.container-guru:hover+.text {
-    border-radius: 0 0 30px 30px;
-    transition: all 1s;
-}
-
-.container-guru {
-    position: relative;
-    width: 300px;
-    height: auto;
-}
-
-/* .container-guru img{
-    margin-bottom: -2p;
-  } */
-.text {
-    width: 300px;
-    height: auto;
-    background-color: #505254;
-    opacity: 0.8;
-    margin-top: -3px;
-    text-align: center;
-    transition: all 1s;
-    padding: 10px 0 0;
-}
-
-h4 {
-    font-size: 30px;
-}
-
-h5 {
-    font-size: 19px;
-    color: rgba(80, 80, 80, 0.993);
-}
-
-.guru {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    /* margin: 0 auto; */
-}
-
-.guru-container {
-    flex-basis: 30%;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-.container-guru img {
-    width: 300px !important;
-    height: 293px;
-}
-
-
-/* Jumlah Siswa */
-
-.jumlah-siswa .container {
-    height: 268px;
-    background-color: #FAFAFA;
-    margin-bottom: 60px;
-
-    background: url(../assets/background-siswa.png);
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.jumlah-siswa .container .siswa-slider {
-    width: 120px;
-}
-
-
-
-.container .siswa-slider .siswa {
-    font-size: 55px;
-    text-align: center;
-    color: #C0CAC9;
-
-}
-
-/* Prestasi */
-.prestasi-container {
-    height: 444px;
-}
-
-.prestasi {
-    display: inline-block;
-}
-
-.prestasi-slider {
-    padding-left: 20px;
-}
-
-.prestasi img {
-    width: 408px;
-    height: 304px;
-    overflow: hidden;
-}
-
-
-/* Footer */
-footer {
-    margin-top: 60px;
-    height: 100px;
-    background-color: #FAFAFA;
-    text-align: center;
-    line-height: 100px;
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
-}
-
-footer p {
-    opacity: 0.6;
-}
-
-footer a {
-    text-decoration: none;
 }

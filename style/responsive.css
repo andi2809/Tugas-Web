@@ -1,7 +1,7 @@
 /* Untuk Tablet */
 @media all and (max-width: 1000px) {
     .logo {
-        width: 245px;
+        width: 150px;
     }
 
     .header-right {
@@ -40,8 +40,18 @@
 
 
 
+
 /* Untuk Smartphone */
 @media all and (max-width: 700px) {
+    header .container {
+        width: 100%;
+        background-color: rgba(240, 248, 255, 0.6);
+    }
+
+    .header-left {
+        margin: auto;
+    }
+
     .header-right {
         display: none;
     }
@@ -54,12 +64,6 @@
         font-size: 31px;
     }
 
-    .foto-tentang {
-        width: 406px;
-        height: 273px;
-        border-radius: 45px;
-        box-sizing: border-box;
-    }
 
     .text-tentang {
         font-size: 16px;
@@ -72,9 +76,8 @@
 
     .prestasi img {
         margin: 0 auto;
+
     }
-
-
 
     .guru-container {
         /* margin-left: 100px; */
@@ -87,4 +90,14 @@
         justify-content: space-evenly !important;
     }
 
+}
+
+@media all and (max-width: 430px) {
+    .prestasi {
+        width: 90%;
+    }
+
+    .prestasi img {
+        width: 95%;
+    }
 }
