@@ -49,11 +49,34 @@
     }
 
     .header-left {
+        width: 100%;
         margin: auto;
+        text-align: center;
     }
 
     .header-right {
         display: none;
+    }
+
+    /* Hamburger */
+
+    span {
+        display: inline;
+        position: absolute;
+        top: 11px;
+        right: 20px;
+        font-size: 50px;
+        cursor: pointer;
+    }
+
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
     }
 
     .top-wrapper>p {

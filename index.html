@@ -31,18 +31,31 @@
 <body>
     <!-- Membuat Header -->
     <header>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="#beranda">Beranda</a>
+                <a href="#tentang">Tentang</a>
+                <a href="#guru">Guru</a>
+                <a href="#ruangan">Ruangan</a>
+                <a href="#industri">Industri</a>
+                <a href="#lokasi">Lokasi</a>
+            </div>
+        </div>
+          
         <!--Nav Bar -->
             <div class="container">
                 <div class="header-left">
                     <a href="#"><img src="assets/header/logo-sija.png" alt="Logo SIJA" class="logo"></a>
                 </div>
+                <span onclick="openNav()">&#9776;</span>
                 <div class="header-right">
-                    <a href="#">Beranda</a>
-                    <a href="#">Tentang</a>
-                    <a href="#">Guru</a>
-                    <a href="#">Ruangan</a>
-                    <a href="#">Industri</a>
-                    <a href="#">Lokasi</a>
+                    <a href="#beranda">Beranda</a>
+                    <a href="#tentang">Tentang</a>
+                    <a href="#guru">Guru</a>
+                    <a href="#ruangan">Ruangan</a>
+                    <a href="#industri">Industri</a>
+                    <a href="#lokasi">Lokasi</a>
                 </div>
             </div>
             <div class="top-wrapper">
@@ -225,7 +238,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="script/javascript.js"></script>
+    <script src="/script/javascript.js"></script>
 </body>
 
 </html>
